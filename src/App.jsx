@@ -1,5 +1,6 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
-import RECIPES from "./pages/AISafetyCookBook";
+import AISafety from "./pages/AISafetyCookBook";
+import AISecurity from "./pages/AISecurityCookBook"
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <HashRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<RECIPES />} />
+        <Route path="/" element={<AISafety />} />
+        <Route path="/AISecurity" element={<AISecurity />} />
       </Routes>
     </HashRouter>
   );

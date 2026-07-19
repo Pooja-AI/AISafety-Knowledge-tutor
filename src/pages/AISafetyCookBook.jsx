@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const RECIPES = [
+const AISafety = [
   {
     id: "threat-modeling",
     category: "Foundations",
@@ -1548,7 +1548,7 @@ function Header() {
       </div>
       <div style={{ marginLeft: "auto", display: "flex", gap: 20 }}>
         {[
-          { label: "Recipes", value: RECIPES.length },
+          { label: "Recipes", value: AISafety.length },
           { label: "Categories", value: CATEGORIES.length - 1 },
         ].map(({ label, value }) => (
           <div key={label} style={{ textAlign: "center" }}>
@@ -1562,7 +1562,7 @@ function Header() {
 }
 
 export default function App() {
-  const [selected, setSelected] = useState(RECIPES[0]);
+  const [selected, setSelected] = useState(AISafety[0]);
   const [category, setCategory] = useState("All");
   const [search, setSearch] = useState("");
 
@@ -1573,7 +1573,8 @@ export default function App() {
         flexDirection: "column",
         height: "100vh",
         fontFamily: "var(--font-sans, system-ui, sans-serif)",
-        background: "var(--color-background-tertiary, radial-gradient(circle at top, #0f172a, #020617))",
+        background: "var(--color-background-tertiary, radial-gradient(circle at top, #0f172a, #020617);)",
+        // background: "var(--color-background-tertiary, radial-gradient(circle at top, #0f172a, #020617))",
         color: "var(--color-text-primary)",
       }}
     >
@@ -1590,7 +1591,7 @@ export default function App() {
           }}
         >
           <Sidebar
-            recipes={RECIPES}
+            recipes={AISafety}
             selected={selected}
             onSelect={setSelected}
             category={category}
